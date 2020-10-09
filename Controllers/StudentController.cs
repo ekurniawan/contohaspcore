@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using contohaspcore.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,15 +9,10 @@ namespace contohaspcore.Controllers
     //[Route("mahasiswa")]
     public class StudentController : Controller
     {
-        
-        public IActionResult Index(){
-            /*List<string> lstNama = new List<string>{"erick","budi","bambang"};
-            return new JsonResult(lstNama);*/
-            return View();
-        }
-
-        public IActionResult GetStudents(){
-            Student student1 = new Student {
+        private List<Student> lstStudent = new List<Student>();
+        public StudentController()
+        {
+             Student student1 = new Student {
                 Nim = "112233",
                 Nama = "Erick",
                 Alamat = "Lempongsari Raya",
@@ -35,12 +31,28 @@ namespace contohaspcore.Controllers
                 Telp = "08156774433"
             };
 
-            List<Student> lstStudent = new List<Student>();
             lstStudent.Add(student1);
             lstStudent.Add(student2);
             lstStudent.Add(student3);
+        }
+        
+        public IActionResult Index(){
+            /*List<string> lstNama = new List<string>{"erick","budi","bambang"};
+            return new JsonResult(lstNama);*/
+            return View();
+        }
 
+        public IActionResult GetStudents(){
             return View(lstStudent);
+        }
+
+        public IActionResult Detail(string id){
+            //var model = lstStudent.Where(s=>s.Nim==id).SingleOrDefault();
+            Student model = (from s in lstStudent
+                        where s.Nim==id
+                        select s).SingleOrDefault();
+
+            return View(model);
         }
 
         [HttpPost]

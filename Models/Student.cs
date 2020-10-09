@@ -7,4 +7,5 @@ namespace contohaspcore.Models
         public string Alamat { get; set; }
         public string Telp { get; set; }
     }
+
 }

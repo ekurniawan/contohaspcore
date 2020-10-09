@@ -14402,6 +14402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\Detail.cshtml",
+      "TargetPath": "Views\\Student\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\Registration.cshtml",
       "TargetPath": "Views\\Student\\Registration.cshtml",
       "FileKind": "mvc"

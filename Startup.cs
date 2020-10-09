@@ -29,6 +29,17 @@ namespace contohaspcore
             //contoh middleware
             app.UseRouting();
 
+            app.Use(async(context,next)=>{
+                if(context.Request.Path.Value.Contains("home")){
+                    await context.Response.WriteAsync("Response dr middleware");
+                }
+                else {
+                    Console.WriteLine("== Before Run ==");
+                    await next.Invoke();
+                    Console.WriteLine("== After Run ==");
+                }
+            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>

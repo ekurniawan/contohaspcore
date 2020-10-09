@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -16,10 +17,12 @@ namespace contohaspcore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+        IConfiguration config)
         {
             if (env.IsDevelopment())
             {
@@ -29,7 +32,7 @@ namespace contohaspcore
             //contoh middleware
             app.UseRouting();
 
-            app.Use(async(context,next)=>{
+            /*app.Use(async(context,next)=>{
                 if(context.Request.Path.Value.Contains("home")){
                     await context.Response.WriteAsync("Response dr middleware");
                 }
@@ -43,13 +46,14 @@ namespace contohaspcore
             app.Run(async(context)=>{
                 Console.Write("Dijalankan pada saat method run");
                 await context.Response.WriteAsync("Hello from middleware\n");
-            });
+            });*/
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Training ASP Core 3.1");
+                    var greetings = config["Greetings"];
+                    await context.Response.WriteAsync($"Pesan: {greetings}");
                 });
             });
         }

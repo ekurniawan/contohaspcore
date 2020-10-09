@@ -17,12 +17,13 @@ namespace contohaspcore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            //menginject modul
+            services.AddSingleton<IGreeter,Greeter>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
-        IConfiguration config)
+        IConfiguration config, IGreeter greeter)
         {
             if (env.IsDevelopment())
             {
@@ -52,7 +53,7 @@ namespace contohaspcore
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    var greetings = config["Greetings"];
+                    var greetings = greeter.GetMessageOfTheDay();
                     await context.Response.WriteAsync($"Pesan: {greetings}");
                 });
             });

@@ -19,6 +19,7 @@ namespace contohaspcore
         {
             //menginject modul
             services.AddSingleton<IGreeter,Greeter>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

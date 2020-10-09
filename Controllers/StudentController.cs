@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace contohaspcore.Controllers
@@ -8,7 +9,8 @@ namespace contohaspcore.Controllers
     {
         
         public IActionResult Index(){
-            return Content("From Student Controller");
+            List<string> lstNama = new List<string>{"erick","budi","bambang"};
+            return new JsonResult(lstNama);
         }
 
         //[Route("alamat")]

@@ -14390,6 +14390,17 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "contohaspcore",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\Index.cshtml",
+      "TargetPath": "Views\\Student\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\Registration.cshtml",
+      "TargetPath": "Views\\Student\\Registration.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }

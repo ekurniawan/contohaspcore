@@ -9,13 +9,25 @@ namespace contohaspcore.Controllers
     {
         
         public IActionResult Index(){
-            List<string> lstNama = new List<string>{"erick","budi","bambang"};
-            return new JsonResult(lstNama);
+            /*List<string> lstNama = new List<string>{"erick","budi","bambang"};
+            return new JsonResult(lstNama);*/
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Registration(string nim,string nama){
+            ViewData["Nim"] = nim;
+            ViewData["Nama"] = nama;
+            return View(); 
+        }
+
+        public IActionResult GetDetail(string id,string nama){
+            return Content($"ID : {id} {nama}");
         }
 
         //[Route("alamat")]
-        public IActionResult Address(){
-            return Content("Student Address");
+        public IActionResult Address(string address,string city){
+            return Content($"Address: {address} {city}");
         }
     }
 }

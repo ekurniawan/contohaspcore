@@ -18,3 +18,15 @@ C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\staticwebassets\cont
 C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.dll
 C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.pdb
 C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.genruntimeconfig.cache
+C:\Workshop\2020\Sept\contohaspcore\bin\Debug\netcoreapp3.1\contohaspcore.Views.dll
+C:\Workshop\2020\Sept\contohaspcore\bin\Debug\netcoreapp3.1\contohaspcore.Views.pdb
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.RazorAssemblyInfo.cache
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.RazorAssemblyInfo.cs
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.TagHelpers.input.cache
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.TagHelpers.output.cache
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.RazorCoreGenerate.cache
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.RazorTargetAssemblyInfo.cs
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.Views.pdb
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\contohaspcore.csproj.CopyComplete
+C:\Workshop\2020\Sept\contohaspcore\obj\Debug\netcoreapp3.1\Razor\Views\Student\Registration.cshtml.g.cs

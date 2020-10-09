@@ -15,9 +15,10 @@ namespace contohaspcore.Controllers
         }
 
         [HttpPost]
-        public IActionResult Registration(string nim,string nama){
+        public IActionResult Registration(string nim,string nama,double nilai){
             ViewData["Nim"] = nim;
             ViewData["Nama"] = nama;
+            ViewData["Nilai"] = nilai;
             return View(); 
         }
 

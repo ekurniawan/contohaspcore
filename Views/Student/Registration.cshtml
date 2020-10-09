@@ -1,5 +1,8 @@
 @{
     Layout=null;
+
+    double nilai= Convert.ToDouble(ViewData["Nilai"]);
+
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -11,5 +14,10 @@
 <body>
     <h2>Data Student</h2>
     <p>Nim anda @ViewData["Nim"] dan Nama anda: @ViewData["Nama"] </p>
+    @if(nilai>=70){
+        <p style="color:blue;">Anda Lulus</p>
+    }else {
+        <p style="color:red;">Anda Tidak Lulus</p>
+    }
 </body>
 </html>

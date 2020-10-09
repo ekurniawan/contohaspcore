@@ -14392,6 +14392,11 @@
   "RootNamespace": "contohaspcore",
   "Documents": [
     {
+      "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\GetStudents.cshtml",
+      "TargetPath": "Views\\Student\\GetStudents.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Workshop\\2020\\Sept\\contohaspcore\\Views\\Student\\Index.cshtml",
       "TargetPath": "Views\\Student\\Index.cshtml",
       "FileKind": "mvc"

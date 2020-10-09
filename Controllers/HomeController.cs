@@ -7,5 +7,9 @@ namespace contohaspcore.Controllers
         public IActionResult Index(){
             return Content("Hello from Controller !");
         }
+
+        public IActionResult About(){
+            return Content("About Page");
+        }
     }
 }

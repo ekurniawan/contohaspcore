@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lJw2aR46kh0i2ww/AupNFFMTxHlnpcFsMKBBvbr7utPFgMxBIxXkPePH3rRqwc8RODEI9MuACm0vRZKD9QO6dA==",
+  "success": true,
+  "projectFilePath": "C:\\Workshop\\2020\\Sept\\contohaspcore\\contohaspcore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\erick\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

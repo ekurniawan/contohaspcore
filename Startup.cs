@@ -40,6 +40,11 @@ namespace contohaspcore
                 }
             });
 
+            app.Run(async(context)=>{
+                Console.Write("Dijalankan pada saat method run");
+                await context.Response.WriteAsync("Hello from middleware");
+            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>

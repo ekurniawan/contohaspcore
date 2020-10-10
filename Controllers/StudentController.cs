@@ -34,6 +34,16 @@ namespace contohaspcore.Controllers
             return View(model);
         }
 
+        public IActionResult Insert(){
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Insert(Student student){
+            _student.Insert(student);
+            return RedirectToAction("GetStudents");
+        }
+
         [HttpPost]
         public IActionResult Registration(string nim,string nama,double nilai){
             ViewData["Nim"] = nim;

@@ -41,5 +41,10 @@ namespace contohaspcore.Services {
             var result = _student.Where(s=>s.Nim==id).SingleOrDefault();
             return result;
         }
+
+        public void Insert(Student student)
+        {
+            _student.Add(student);
+        }
     }
 }

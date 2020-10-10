@@ -7,5 +7,6 @@ namespace contohaspcore.Services
     {
         IEnumerable<Student> GetAll();
         Student GetById(string id);
+        void Insert(Student student);
     }
 }

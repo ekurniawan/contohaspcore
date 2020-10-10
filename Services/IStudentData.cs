@@ -6,5 +6,6 @@ namespace contohaspcore.Services
     public interface IStudentData
     {
         IEnumerable<Student> GetAll();
+        Student GetById(string id);
     }
 }

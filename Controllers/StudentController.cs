@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using contohaspcore.Models;
+using contohaspcore.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace contohaspcore.Controllers
@@ -9,29 +10,28 @@ namespace contohaspcore.Controllers
     //[Route("mahasiswa")]
     public class StudentController : Controller
     {
-        public StudentController()
+        private IStudentData _student;
+        public StudentController(IStudentData student)
         {
-            
+            _student = student;
         }
     
         public IActionResult Index(){
-            /*List<string> lstNama = new List<string>{"erick","budi","bambang"};
-            return new JsonResult(lstNama);*/
             return View();
         }
 
         public IActionResult GetJsonData(){
-            return View();
+            return new JsonResult(_student.GetAll());
         }
 
         public IActionResult GetStudents(){
-           return View();
+            var models = _student.GetAll();
+           return View(models);
         }
 
         public IActionResult Detail(string id){
-            //var model = lstStudent.Where(s=>s.Nim==id).SingleOrDefault();
-            
-            return View();
+            var model = _student.GetById(id);
+            return View(model);
         }
 
         [HttpPost]

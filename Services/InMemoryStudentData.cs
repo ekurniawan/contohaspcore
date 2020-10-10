@@ -27,10 +27,19 @@ namespace contohaspcore.Services {
                 Telp = "08156774433"
                 }
             };
-
         }
         public IEnumerable<Student> GetAll () {
-            return _student.OrderBy(s=>s.Nama);
+            var results = from s in _student
+                          orderby s.Nama ascending
+                          select s;
+            
+            return results.ToList();
+        }
+
+        public Student GetById(string id)
+        {
+            var result = _student.Where(s=>s.Nim==id).SingleOrDefault();
+            return result;
         }
     }
 }

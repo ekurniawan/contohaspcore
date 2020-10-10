@@ -9,33 +9,11 @@ namespace contohaspcore.Controllers
     //[Route("mahasiswa")]
     public class StudentController : Controller
     {
-        private List<Student> lstStudent = new List<Student>();
         public StudentController()
         {
-             Student student1 = new Student {
-                Nim = "112233",
-                Nama = "Erick",
-                Alamat = "Lempongsari Raya",
-                Telp = "08156778894"
-            };
-            Student student2 =new Student{
-                Nim = "112244",
-                Nama = "Budi",
-                Alamat = "Gowongan Lor",
-                Telp = "0815677999"
-            };
-            Student student3 = new Student{
-                Nim = "112255",
-                Nama = "Bambang",
-                Alamat = "Jl Kaliurang km 6",
-                Telp = "08156774433"
-            };
-
-            lstStudent.Add(student1);
-            lstStudent.Add(student2);
-            lstStudent.Add(student3);
+            
         }
-        
+    
         public IActionResult Index(){
             /*List<string> lstNama = new List<string>{"erick","budi","bambang"};
             return new JsonResult(lstNama);*/
@@ -43,20 +21,17 @@ namespace contohaspcore.Controllers
         }
 
         public IActionResult GetJsonData(){
-            return new JsonResult(lstStudent);
+            return View();
         }
 
         public IActionResult GetStudents(){
-            return View(lstStudent);
+           return View();
         }
 
         public IActionResult Detail(string id){
             //var model = lstStudent.Where(s=>s.Nim==id).SingleOrDefault();
-            Student model = (from s in lstStudent
-                        where s.Nim==id
-                        select s).SingleOrDefault();
-
-            return View(model);
+            
+            return View();
         }
 
         [HttpPost]

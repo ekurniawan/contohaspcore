@@ -28,6 +28,17 @@ namespace contohaspcore.Services {
                 }
             };
         }
+
+        public void Edit(string id,Student student)
+        {
+            //var result = _student.Where(s=>s.Nim==id).SingleOrDefault();
+            Student result = GetById(id);
+
+            result.Nama = student.Nama;
+            result.Alamat = student.Alamat;
+            result.Telp = student.Telp;
+        }
+
         public IEnumerable<Student> GetAll () {
             var results = from s in _student
                           orderby s.Nama ascending

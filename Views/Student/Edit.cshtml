@@ -1,25 +1,27 @@
+@model contohaspcore.Models.Student
+
 @{
     Layout=null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Data</title>
+    <title>Edit Student</title>
 </head>
 <body>
-    <h2>Insert Student</h2>
-    <form method="POST" action="~/Student/Insert">
+    <h2>Edit Student</h2>
+     <form method="POST" action="~/Student/Edit">
         <fieldset>
-            <label for="Nim">Nim :</label><br/>
-            <input type="text" name="Nim"><br/><br/>
+            <input type="hidden" name="Nim" value="@Model.Nim">
             <label for="Nama">Nama :</label><br/>
-            <input type="text" name="Nama"><br/><br/>
+            <input type="text" name="Nama" value="@Model.Nama"><br/><br/>
             <label for="Alamat">Alamat :</label><br/>
-            <input type="text" name="Alamat"><br/><br/>
+            <input type="text" name="Alamat" value="@Model.Alamat"><br/><br/>
             <label for="Telp">Telp :</label><br/>
-            <input type="text" name="Telp"><br/><br/>
+            <input type="text" name="Telp" value="@Model.Telp"><br/><br/>
 
             <input type="submit" value="Submit">
         </fieldset>

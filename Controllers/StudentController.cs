@@ -44,6 +44,17 @@ namespace contohaspcore.Controllers
             return RedirectToAction("GetStudents");
         }
 
+        public IActionResult Edit(string id){
+            var model = _student.GetById(id);
+            return View(model);
+        }   
+
+        [HttpPost]
+        public IActionResult Edit(Student student){
+            _student.Edit(student.Nim,student);
+            return RedirectToAction("GetStudents");
+        }
+
         [HttpPost]
         public IActionResult Registration(string nim,string nama,double nilai){
             ViewData["Nim"] = nim;

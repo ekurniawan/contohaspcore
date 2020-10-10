@@ -15,7 +15,7 @@
     <h2>Daftar Student</h2>
     <table border="1">
         <tr>
-            <th>Nim</th><th>Nama</th><th>Alamat</th><th>Telp</th>
+            <th>Nim</th><th>Nama</th><th>Alamat</th><th>Telp</th><th></th>
         </tr>
         @foreach (var student in Model)
         {
@@ -24,6 +24,7 @@
                 <td>@student.Nama</td>
                 <td>@student.Alamat</td>
                 <td>@student.Telp</td>
+                <td><a href="~/Student/Detail/@student.Nim">detail</a></td>
             </tr>
         }
     </table>

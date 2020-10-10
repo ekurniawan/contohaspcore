@@ -42,6 +42,10 @@ namespace contohaspcore.Controllers
             return View();
         }
 
+        public IActionResult GetJsonData(){
+            return new JsonResult(lstStudent);
+        }
+
         public IActionResult GetStudents(){
             return View(lstStudent);
         }

@@ -1,5 +1,6 @@
 namespace contohaspcore.Models
 {
+    //POCO = Plain Old C# Object
     public class Student
     {
         public string Nim { get; set; }
